@@ -1,0 +1,74 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--white);
+    box-shadow: 0 4px 20px rgba(44, 94, 59, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    transition: color 0.3s ease;
+}
+
+header h1:hover {
+    color: var(--accent-green);
+}
+
+header nav {
+    display: flex;
+    gap: 30px;
+}
+
+/* Estilização para os NavLinks/Links */
+header nav a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    position: relative;
+    padding: 6px 0;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--primary-green);
+}
+
+/* Efeito Ágil de Transição na Linha Inferior do Menu */
+header nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-green);
+    transform-origin: bottom right;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+header nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+}

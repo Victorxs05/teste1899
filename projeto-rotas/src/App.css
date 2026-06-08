@@ -1,0 +1,40 @@
+:root {
+  --primary-green: #2c5e3b;  /* Verde corporativo e firme */
+  --accent-green: #4caf50;   /* Verde ágil para destaques e hovers */
+  --light-beige: #f9f6f0;    /* Bege claro para o fundo geral */
+  --card-beige: #f3ede2;     /* Bege médio para contraste de elementos */
+  --text-dark: #2a302b;      /* Grafite escuro para leitura confortável */
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--light-beige);
+  color: var(--text-dark);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
